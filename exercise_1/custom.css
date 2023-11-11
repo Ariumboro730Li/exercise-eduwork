@@ -1,0 +1,43 @@
+.asal-asalan {
+    padding: 5px;
+    font-size: 2em;
+    color: blueviolet;
+}
+
+.title-mobilbos {
+    padding: 5px;
+    font-size: 2em;
+}
+
+.carousel-inner {
+    max-height: 750px;
+}
+
+.img-item {
+    height: 100%;
+    /* Tinggi gambar (img) sesuai tinggi carousel-inner */
+    width: 100%;
+    /* Lebar gambar menyesuaikan proporsi aslinya */
+    object-fit: scale-down;
+    /* Memastikan gambar terisi penuh tanpa merubah rasio aslinya */
+}
+
+#searchForm {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 30px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    width: 700px;
+}
+
+.nav-link.active {
+    color: blue !important;
+    font-size: 1em;
+    font-weight: bold;
+}
