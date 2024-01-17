@@ -1,0 +1,42 @@
+@startuml
+
+entity jaminan_lists {
+    * id <<PK>>
+    --
+    * name : varchar(255)
+}
+
+entity poli_lists {
+    * id <<PK>>
+    --
+    * name : varchar(255)
+}
+
+entity rekam_lists {
+    * id <<PK>>
+    --
+    * name : varchar(255)
+}
+
+entity dokter_lists {
+    * id <<PK>>
+    --
+    * name : varchar(255)
+}
+
+entity kunjungan_records {
+    * id <<PK>>
+    --
+    * shift 
+    * jaminan_id : BIGINT <<FK>>
+    * poli_id : BIGINT <<FK>>
+    * rekam_id : BIGINT <<FK>>
+    * dokter_id : BIGINT <<FK>>
+}
+
+jaminan_lists ||--o{ kunjungan_records
+poli_lists ||--o{ kunjungan_records
+rekam_lists ||--o{ kunjungan_records
+dokter_lists ||--o{ kunjungan_records
+
+@enduml

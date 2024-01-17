@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>fetch Json</title>
+</head>
+
+<body>
+
+    <!-- <div id="idDiv"></div> -->
+
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+            </tr>
+        </thead>
+        <tbody id="idTbody">
+
+        </tbody>
+    </table>
+
+    <script>
+        fetch('file.json')
+            .then(response => {
+                // Check if the request was successful (status code 200)
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                // Parse the JSON from the response
+                return response.json();
+            })
+            .then(data => {
+                let textDiv = "";
+                Object.keys(data.data).forEach(function(element) {
+                    let dataEl = data.data[element];
+                    textDiv += `<tr>
+                        <td>${dataEl.id}</td>
+                        <td>${dataEl.name}</td>
+                    </tr>`;
+                })
+                document.getElementById('idTbody').innerHTML = textDiv;
+            })
+            .catch(error => {
+                // Handle errors during the fetch operation
+                console.error('Error during fetch operation:', error);
+            });
+    </script>
+
+</body>
+
+</html>

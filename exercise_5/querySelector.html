@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>querySelector</title>
+</head>
+
+<body>
+
+    <p>paragraph 1</p>
+    <p>paragraph 2</p>
+    <p>paragraph 3</p>
+
+    <script>
+        let querySelector = document.querySelectorAll('p');
+        Object.keys(querySelector).forEach(function(element) {
+            if (element % 2) {
+                querySelector[element].innerHTML = "<b>change</b>";
+            }
+        })
+    </script>
+
+</body>
+
+</html>

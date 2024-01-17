@@ -1,0 +1,4 @@
+card dengan for dan if
+membuat 100 card perkalian 5, dimana jika yg dikali
+= genap, card text nya berwarna merah dengan bold
+= ganjil, card text nya berwarna hijau dengan bold

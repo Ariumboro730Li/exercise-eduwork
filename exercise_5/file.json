@@ -1,0 +1,15 @@
+{
+    "data": [{
+        "id": 1,
+        "name": "nama 1"
+    }, {
+        "id": 2,
+        "name": "nama 2"
+    }, {
+        "id": 3,
+        "name": "nama 3"
+    }, {
+        "id": 4,
+        "name": "nama 4"
+    }]
+}

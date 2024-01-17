@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>getElementClass</title>
+</head>
+
+<body>
+
+    <p class="paragraph">paragraph 1</p>
+    <p class="paragraph">paragraph 2</p>
+    <p class="paragraph">paragraph 3</p>
+
+    <script>
+        let paragraphClass = document.getElementsByClassName('paragraph');
+        Object.keys(paragraphClass).forEach(function(element) {
+            if (element % 2) {
+                //paragraphClass[element].innerText = "change";
+                paragraphClass[element].innerHTML = "<b>change</b>";
+            }
+        })
+    </script>
+
+</body>
+
+</html>
